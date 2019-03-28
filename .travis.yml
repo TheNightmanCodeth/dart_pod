@@ -1,5 +1,6 @@
 language: dart
 dart:
-  - beta
+  - 2.1.0
+  - stable
 dart_task:
   - test: --platform flutter
