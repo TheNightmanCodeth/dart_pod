@@ -1,6 +1,8 @@
 # A podcasts library for Dart
 
 [![Build Status](https://travis-ci.org/TheNightmanCodeth/dart_pod.svg?branch=master)](https://travis-ci.org/TheNightmanCodeth/dart_pod)
+[![Coverage Status](https://coveralls.io/repos/github/TheNightmanCodeth/dart_pod/badge.svg)](https://coveralls.io/github/TheNightmanCodeth/dart_pod)
+[![Pub](https://img.shields.io/pub/vpre/dart_pod.svg)](https://pub.dartlang.org/packages/dart_pod)
 
 ## Introduction
 **dart_pod** makes it easy to get information for a podcast from its feed URL.
