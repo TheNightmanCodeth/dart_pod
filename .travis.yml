@@ -1,0 +1,7 @@
+language: dart
+dart:
+  - beta
+dart_task:
+  - test: --platform flutter
+  - dartfmt
+  - dartdoc
