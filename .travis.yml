@@ -1,6 +1,5 @@
-language: dart
-dart:
-  - 2.1.0
-  - stable
-script:
-  - pub run test
+matrix:
+  include:
+    - dart: 2.1.0
+    - script:
+      - pub run test
