@@ -2,5 +2,5 @@ language: dart
 dart:
   - 2.1.0
   - stable
-dart_task:
-  - test: --platform flutter
+script:
+  - pub run test
