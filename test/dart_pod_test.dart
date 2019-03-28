@@ -23,12 +23,12 @@ import 'package:test/test.dart';
 void main() async {
   final url = "https://rss.art19.com/not-another-d-and-d-podcast";
   final show = await Show.newFromURL(url);
-  test('Show is created using initFromURL', () { 
+  test('Show is created using initFromURL', () {
     expect(show, isNotNull);
   });
   test('Show has episodes', () {
-    expect (show.episodes, isNotEmpty);
-    expect (show.episodes.length, greaterThanOrEqualTo(5));
+    expect(show.episodes, isNotEmpty);
+    expect(show.episodes.length, greaterThanOrEqualTo(5));
   });
   test('All shows have a stream link', () {
     for (Episode e in show.episodes) {

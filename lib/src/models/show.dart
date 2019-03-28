@@ -23,13 +23,13 @@ import 'package:xml/xml.dart';
 import 'episode.dart';
 
 /// This class holds data about a podcast.
-/// 
+///
 /// Don't use the constructor. Instead, use [newFromURL].
-class Show {  
+class Show {
   XmlDocument doc;
 
   /// Creates a new [Show] from an RSS url.
-  /// 
+  ///
   /// Gathers information from the XML response and creates
   /// handy getters to make it simple to interact with.
   static Future<Show> newFromURL(String uri) async {
@@ -41,16 +41,18 @@ class Show {
       show.doc = document;
       return show;
     } catch (e) {
-      print("ERROR: Could not parse response body. Here's the deets: \n${e.message}");
+      print(
+          "ERROR: Could not parse response body. Here's the deets: \n${e.message}");
     }
     return null;
   }
 
   /// The author of this podcast
   String get author {
-    if (doc.findAllElements("author").length < 1)
+    if (doc.findAllElements("author").isEmpty)
       return doc.findAllElements("author").first.text;
-    else return doc.findAllElements("itunes:author").first.text;
+    else
+      return doc.findAllElements("itunes:author").first.text;
   }
 
   /// The copyright for this show
@@ -64,7 +66,7 @@ class Show {
   }
 
   /// Returns a list of [Episode]s.
-  /// 
+  ///
   /// The episodes are stored as a list of items in the document.
   /// The relevant information is extracted and stored inside of
   /// a new [Episode]
@@ -72,11 +74,10 @@ class Show {
     var eps = List<Episode>();
     for (XmlElement e in doc.findAllElements("item")) {
       eps.add(Episode(
-        e.findElements("title").first.text,
-        e.findElements("description").first.text,
-        e.findElements("pubDate").first.text,
-        e.findElements("enclosure").first.getAttribute("url")
-      ));
+          e.findElements("title").first.text,
+          e.findElements("description").first.text,
+          e.findElements("pubDate").first.text,
+          e.findElements("enclosure").first.getAttribute("url")));
     }
     return eps;
   }
