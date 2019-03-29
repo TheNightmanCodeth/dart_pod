@@ -54,6 +54,9 @@
   <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
       <section class="desc markdown">
         <h1 id="a-podcasts-library-for-dart">A podcasts library for Dart</h1>
+<p><a href="https://travis-ci.org/TheNightmanCodeth/dart_pod"><img alt="Build Status" src="https://travis-ci.org/TheNightmanCodeth/dart_pod.svg?branch=master"></a>
+<a href="https://coveralls.io/github/TheNightmanCodeth/dart_pod"><img alt="Coverage Status" src="https://coveralls.io/repos/github/TheNightmanCodeth/dart_pod/badge.svg"></a>
+<a href="https://pub.dartlang.org/packages/dart_pod"><img alt="Pub" src="https://img.shields.io/pub/vpre/dart_pod.svg"></a></p>
 <h2 id="introduction">Introduction</h2>
 <p><strong>dart_pod</strong> makes it easy to get information for a podcast from its feed URL.
 With just a <em>single</em> URL, <strong>dart_pod</strong> gives you access to:</p><ul><li>A list of episodes with details <strong>and</strong> stream urls</li><li>Details about the show and its creators</li></ul>
@@ -64,7 +67,7 @@ With just a <em>single</em> URL, <strong>dart_pod</strong> gives you access to:<
 
 void main() async {
     var feed_url = "https://rss.art19.com/not-another-d-and-d-podcast"
-    var naddpod = await Show.initFromURL(feed_url);
+    var naddpod = await Podcast.initFromURL(feed_url);
 
     List&lt;Episode&gt; episodes = naddpod.episodes;
     for (Episode e in episodes) {
@@ -76,7 +79,6 @@ void main() async {
 }
 
 </code></pre>
-<h2 id="coming-soon">Coming Soon</h2><ul><li><code> </code> iTunes integration</li></ul>
       </section>
       
         <section class="summary">
@@ -100,7 +102,7 @@ void main() async {
 
 <footer>
   <span class="no-break">
-    dart_pod 0.0.1
+    dart_pod 0.0.2
   </span>
 
   
