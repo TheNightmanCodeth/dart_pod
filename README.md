@@ -21,7 +21,7 @@ import 'package:dart_pod/dart_pod.dart';
 
 void main() async {
     var feed_url = "https://rss.art19.com/not-another-d-and-d-podcast"
-    var naddpod = await Show.initFromURL(feed_url);
+    var naddpod = await Podcast.initFromURL(feed_url);
 
     List<Episode> episodes = naddpod.episodes;
     for (Episode e in episodes) {
@@ -33,6 +33,3 @@ void main() async {
 }
 
 ```
-
-## Coming Soon
-- [ ] iTunes integration

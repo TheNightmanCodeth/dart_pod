@@ -22,7 +22,7 @@ import 'package:test/test.dart';
 
 void main() async {
   final url = "https://rss.art19.com/not-another-d-and-d-podcast";
-  final show = await Show.newFromURL(url);
+  final show = await Podcast.newFromURL(url);
   test('Show is created using initFromURL', () {
     expect(show, isNotNull);
   });

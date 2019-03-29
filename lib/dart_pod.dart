@@ -20,4 +20,4 @@
 library dart_pod;
 
 export 'src/models/episode.dart';
-export 'src/models/show.dart';
+export 'src/models/podcast.dart';

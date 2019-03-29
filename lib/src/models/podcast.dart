@@ -25,19 +25,19 @@ import 'episode.dart';
 /// This class holds data about a podcast.
 ///
 /// Don't use the constructor. Instead, use [newFromURL].
-class Show {
+class Podcast {
   XmlDocument doc;
 
-  /// Creates a new [Show] from an RSS url.
+  /// Creates a new [Podcast] from an RSS url.
   ///
   /// Gathers information from the XML response and creates
   /// handy getters to make it simple to interact with.
-  static Future<Show> newFromURL(String uri) async {
+  static Future<Podcast> newFromURL(String uri) async {
     if (uri == null) throw Exception("URL cannot be null");
     final rssResponse = await http.get(uri);
     try {
       var document = parse(rssResponse.body);
-      var show = Show();
+      var show = Podcast();
       show.doc = document;
       return show;
     } catch (e) {
