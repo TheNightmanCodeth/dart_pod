@@ -1,6 +1,6 @@
 name: dart_pod
 description: A dart package for accessing podcasts from RSS feeds.
-version: 0.0.2
+version: 0.1.0
 author: Joe Diragi <joyod3@gmail.com>
 homepage: https://jdiggity.me/
 
